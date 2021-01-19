@@ -36,6 +36,14 @@ var ShopCar=(name,price)=>
          price = price * count;
          $totalmoney.attr('value',price); //修改商品價格
          $totalmoney.text('$'+price); //修改顯示的商品價格
+
+        var tp = 0;
+        for(let i = 0; i < totalPrice.length ; i++)
+        {
+            tp = tp + Number($(totalPrice[i]).attr('value'));
+        }
+        
+        $('#TP').text('Total Price $' + tp).show();
     })
 
     $($cancel).on('click',()=>{
@@ -43,6 +51,7 @@ var ShopCar=(name,price)=>
         let totalPrice = $('.totalmoney').get(); //抓取所有class為"totalmoney"的HTML element，並存成一個陣列
         //console.log(typeof(totalPrice))
         //console.log(totalPrice)
+        
         var tp = 0;
         for(let i = 0; i < totalPrice.length ; i++)
         {
