@@ -1,7 +1,7 @@
 var loadNum = 0
 
-//產生購物車商品函式
-var ShopCar=(name,price)=>
+//商品加入購物車函式
+var ShopCart=(name,price)=>
 {
     var $text = $('<p>'+name+ '</p>');
     var $input = $('<input>').attr('type','number').attr('value','1').attr('min','0').attr('max','3');
@@ -37,8 +37,9 @@ var ShopCar=(name,price)=>
          $totalmoney.attr('value',price); //修改商品價格
          $totalmoney.text('$'+price); //修改顯示的商品價格
 
-        var tp = 0;
-        for(let i = 0; i < totalPrice.length ; i++)
+        var tp = 0; //價格結算
+        let totalPrice = $('.totalmoney').get();
+        for(let i = 0; i < $(totalPrice).length ; i++)
         {
             tp = tp + Number($(totalPrice[i]).attr('value'));
         }
@@ -49,8 +50,6 @@ var ShopCar=(name,price)=>
     $($cancel).on('click',()=>{
         $cancel.parent().parent().remove();
         let totalPrice = $('.totalmoney').get(); //抓取所有class為"totalmoney"的HTML element，並存成一個陣列
-        //console.log(typeof(totalPrice))
-        //console.log(totalPrice)
         
         var tp = 0;
         for(let i = 0; i < totalPrice.length ; i++)
@@ -62,19 +61,18 @@ var ShopCar=(name,price)=>
     })
 
     let totalPrice = $('.totalmoney').get(); //抓取所有class為"totalmoney"的HTML element，並存成一個陣列
-        //console.log(typeof(totalPrice))
-        //console.log(totalPrice)
-        var tp = 0;
-        for(let i = 0; i < totalPrice.length ; i++)
-        {
-            tp = tp + Number($(totalPrice[i]).attr('value'));
-        }
-        
-        $('#TP').text('Total Price $' + tp).show()
+    var tp = 0;
+    for(let i = 0; i < carte.length ; i++)
+    {
+        tp = tp + Number($(totalPrice[i]).attr('value'));
+    }
+    
+    $('#TP').text('Total Price $' + tp).show()
 }
 
-function outOfStock(){
-    alert("本商品目前缺貨中，我們將盡快為您補貨！")
+function outOfStock()
+{
+    alert("本商品目前缺貨中，我們將盡快為您補貨！");
 }
 
 $(() => {
@@ -82,34 +80,34 @@ $(() => {
 
     /* 將商品加入購物車*/
     $('.gunpla25').on('click', () => {
-        ShopCar("RG 1/144 #025 獨角獸鋼彈",980);
+        ShopCart("RG 1/144 #025 獨角獸鋼彈",980);
     })
     $('.gunpla29').on('click', () => {
-        ShopCar("RG 1/144 #029 沙薩比",1160);
+        ShopCart("RG 1/144 #029 沙薩比",1160);
     })
     $('.gunpla5').on('click', () => {
-        ShopCar("RG 1/144 #005 自由鋼彈",640);
+        ShopCart("RG 1/144 #005 自由鋼彈",640);
     })
     $('.gunpla27-sp').on('click', () => {
-        ShopCar("RG 1/144 #027-SP 報喪女妖",1030);
+        ShopCart("RG 1/144 #027-SP 報喪女妖",1030);
     })
     $('.gunpla1').on('click', () => {
-        ShopCar("RG 1/144 #001 初代鋼彈",650);
+        ShopCart("RG 1/144 #001 初代鋼彈",650);
     })
     $('.gunpla31').on('click', () => {
-        ShopCar("RG 1/144 #031 海盜鋼彈",650);
+        ShopCart("RG 1/144 #031 海盜鋼彈",650);
     }) 
     $('.gunpla19').on('click', () => {
-        ShopCar("RG 1/144 #019 紅異端鋼彈",650);
+        ShopCart("RG 1/144 #019 紅異端鋼彈",650);
     })
     $('.gunpla27').on('click', () => {
-        ShopCar("RG 1/144 #027 報喪女妖",1050);
+        ShopCart("RG 1/144 #027 報喪女妖",1050);
     })
     $('.gunpla24').on('click', () => {
-        ShopCar("RG 1/144 #024 金異端鋼彈",770);
+        ShopCart("RG 1/144 #024 金異端鋼彈",770);
     })
     $('.gunpla28').on('click', () => {
-        ShopCar("RG 1/144 #028 托爾吉斯EW",645);
+        ShopCart("RG 1/144 #028 托爾吉斯EW",645);
     })
 
     $('.gunpla32').on('click', () => {
@@ -121,8 +119,7 @@ $(() => {
     
     $('#compute').on('click', () => {
         let totalPrice = $('.totalmoney').get() //抓取所有class為"totalmoney"的HTML element，並存成一個陣列
-        //console.log(typeof(totalPrice))
-        //console.log(totalPrice)
+        
         var tp = 0
         for(let i = 0; i < totalPrice.length ; i++)
         {
