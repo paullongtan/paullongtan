@@ -100,13 +100,13 @@ $(() => {
         ShopCar("MG 1/100 獨角獸鋼彈",1150);
     })
     $('.gunpla32plus').on('click', () => {
-        ShopCar("MG 1/100 OOQ 量子型OO 全刃式",1420);
+        ShopCar("MG 1/100 量子型OO 全刃式",1420);
     })
     $('.gunpla27-sp').on('click', () => {
         ShopCar("MG 1/100 GN-002 力天使",1160);
     }) 
     $('.gunpla1').on('click', () => {
-        ShopCar("MG 1/100 MSZ-010 ZZ",1550);
+        ShopCar("MG 1/100 ZZ",1550);
     })
     $('.gunpla31').on('click', () => {
         ShopCar("MGEX 1/100 獨角獸鋼彈 Ver.Ka",6899);
@@ -115,14 +115,14 @@ $(() => {
         ShopCar("MG 1/100 鋼彈F91 ver.2.0",1050);
     })
     $('.gunpla27').on('click', () => {
-        ShopCar("MG 1/100 GN-003 主天使鋼彈",1250);
+        ShopCar("MG 1/100 主天使鋼彈",1250);
     })
 
     $('.gunpla24').on('click', () => {
-        ShopCar("MG 1/100 RX-78-2 Ver. 3.0 初代鋼彈",1180);
+        ShopCar("MG 1/100 初代鋼彈",1180);
     })
     $('.gunpla28plus').on('click', () => {
-        ShopCar("MG 1/100 RX-0 報喪女妖 VER.Ka",1290);
+        ShopCar("MG 1/100 報喪女妖 VER.Ka",1290);
     })
     
     $('#compute').on('click', () => {
