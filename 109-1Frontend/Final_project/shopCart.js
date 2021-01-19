@@ -62,7 +62,7 @@ var ShopCart=(name,price)=>
 
     let totalPrice = $('.totalmoney').get(); //抓取所有class為"totalmoney"的HTML element，並存成一個陣列
     var tp = 0;
-    for(let i = 0; i < carte.length ; i++)
+    for(let i = 0; i < totalPrice.length ; i++)
     {
         tp = tp + Number($(totalPrice[i]).attr('value'));
     }
