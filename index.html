@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yen-Pu (Paul) Wang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-sticky">
+        <div class="profile-photo">
+          <div class="photo-placeholder">YPW</div>
+        </div>
+        <h1 class="sidebar-name">Yen-Pu Wang</h1>
+        <p class="sidebar-name-cn">王彥普</p>
+        <p class="sidebar-badge">Systems &amp; Infra Engineer</p>
+
+        <div class="sidebar-icons">
+          <a href="resume.pdf" target="_blank" rel="noopener" title="CV / Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </a>
+          <a href="mailto:yenpuwang@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </a>
+          <a href="https://github.com/paullongtan" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/yen-pu-wang/" target="_blank" rel="noopener" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+
+        <p class="sidebar-location">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fremont, CA
+        </p>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-body">
+          <p>
+            I'm a Systems and Infrastructure Engineer with an M.S. in Computer Science from
+            <a href="https://ucsd.edu" target="_blank" rel="noopener" class="badge ucsd-badge"><img src="logos/ucsd_logo.jpeg" class="badge-logo" alt="UCSD"> University of California, San Diego</a> (UCSD),
+            with a focus on the Systems Track. I previously studied Finance at
+            <a href="https://english.pku.edu.cn/" target="_blank" rel="noopener" class="badge pku-badge"><img src="logos/pku_logo.png" class="badge-logo" alt="PKU"> Peking University</a> (PKU)
+            before transferring to
+            <a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener" class="badge ntu-badge"><img src="logos/ntu_logo.jpg" class="badge-logo" alt="NTU"> National Taiwan University</a> (NTU),
+            where I obtained a B.A. in Economics.
+          </p>
+          <p>
+            I'm passionate about building reliable, large-scale distributed systems and cloud infrastructure.
+            I've gained hands-on experience at <a href="https://www.yahoo.com/" target="_blank" rel="noopener" class="badge yahoo-badge"><img src="logos/yahoo_logo.jpeg" class="badge-logo" alt="Yahoo"> Yahoo</a>, <a href="https://www.trendmicro.com/" target="_blank" rel="noopener" class="badge trendmicro-badge"><img src="logos/trend_micro_logo.jpeg" class="badge-logo" alt="Trend Micro"> Trend Micro</a>, and <a href="https://shopee.com/" target="_blank" rel="noopener" class="badge shopee-badge"><img src="logos/shopee_logo.jpeg" class="badge-logo" alt="Shopee"> Shopee</a>,
+            working on MLOps pipelines, event-driven microservices, and data infrastructure.
+            I also contribute to open source, notably
+            <a href="https://github.com/flyteorg/flyte" target="_blank" rel="noopener" class="badge flyte-badge"><img src="logos/flyte_logo.webp" class="badge-logo" alt="Flyte">Flyte</a>
+            (ML workflow orchestration).
+          </p>
+          <p>
+            My technical interests span the following areas:
+          </p>
+          <ol class="interest-list">
+            <li><strong>Distributed Systems:</strong> Designing fault-tolerant, scalable storage and compute systems (chain replication, Chord DHT, consensus protocols).</li>
+            <li><strong>Cloud &amp; Infrastructure:</strong> Kubernetes orchestration, CI/CD pipelines, event-driven architectures, and cost optimization on AWS/GCP/Azure.</li>
+            <li><strong>ML Infra &amp; Systems for ML:</strong> Building production ML pipelines, infrastructure, and workflow orchestration platforms.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- NEWS -->
+      <section class="section">
+        <h2 class="section-title">News</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">Dec. 2025</span>
+            <span class="news-text">Graduated with M.S. in CS&amp;E from UCSD!</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">June 2025</span>
+            <span class="news-text">Started as Production Engineer Intern at <strong>Yahoo</strong> in Mountain View, CA.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 2025</span>
+            <span class="news-text">Built <strong>FAWN</strong>, a chain-replicated key-value storage system in Rust.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Dec. 2024</span>
+            <span class="news-text">Started contributing to Flyte</a> open-source project (Go, Python, K8s).</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Sept. 2024</span>
+            <span class="news-text">Began M.S. in Computer Science &amp; Engineering at UCSD.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">July 2024</span>
+            <span class="news-text">Interned at <strong>Trend Micro</strong> (Infrastructure) &mdash; migrated legacy VMs to K8s microservices, cut cloud costs by 95%.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">June 2023</span>
+            <span class="news-text">Graduated with B.A. in Economics from National Taiwan University.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">July 2022</span>
+            <span class="news-text">Started as Data Engineer Intern at <strong>Shopee</strong>, built web-crawling and revenue estimation systems.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card-row">
+          <img src="logos/yahoo_logo.jpeg" class="card-row-logo" alt="Yahoo">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Production Engineer Intern @ <a href="https://www.yahoo.com/" target="_blank" rel="noopener" class="badge yahoo-badge"> Yahoo</a></h3>
+              <span class="card-row-date">June 2025 &ndash; Sept. 2025</span>
+            </div>
+            <p class="exp-sub">Systems and Infrastructure &middot; Mountain View, CA</p>
+            <p class="exp-tech">GCP, Vertex AI, MLOps, Docker, Python, CI/CD</p>
+            <ul>
+              <li>Designed and built a scalable framework of reusable templates for ML workflows, reducing new project setup time from <strong>6 weeks to 1 week</strong>.</li>
+              <li>Slashed LLM fine-tuning cycle time by <strong>30%</strong> via a multi-stage training pipeline triggered through git commits with cached containers on Vertex AI.</li>
+              <li>Architected a pre-merge validation pipeline that benchmarks candidate models against production baselines for safe continuous delivery.</li>
+              <li>Pioneered adoption of a new internal ML Infra tool by implementing async job submission and revamping core documentation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/trend_micro_logo.jpeg" class="card-row-logo" alt="Trend Micro">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Software Engineer Intern @ <a href="https://www.trendmicro.com/" target="_blank" rel="noopener" class="badge trendmicro-badge"> Trend Micro</a></h3>
+              <span class="card-row-date">July 2024 &ndash; Aug. 2024</span>
+            </div>
+            <p class="exp-sub">Infrastructure &middot; Taipei, Taiwan</p>
+            <p class="exp-tech">Azure, Kubernetes, Docker, Kafka, Helm, Python, CI/CD</p>
+            <ul>
+              <li>Re-architected legacy VM-based scripts to event-driven backend microservices on Kubernetes (AKS), improving reliability and auto-scaling.</li>
+              <li>Dropped cloud compute costs by <strong>95%</strong> and boosted ingestion efficiency by <strong>80%</strong> with a high-throughput Kafka data ingestion service.</li>
+              <li>Built a secure backend with RBAC and query filtering for Microsoft Graph API, enabling self-service auth data access for <strong>10+ engineers</strong>.</li>
+              <li>Engineered end-to-end CI/CD for a monorepo with Docker builds, Harbor vulnerability scanning, and ACR deployments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/shopee_logo.jpeg" class="card-row-logo" alt="Shopee">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Data Engineer Intern @ <a href="https://shopee.com/" target="_blank" rel="noopener" class="badge shopee-badge"> Shopee</a></h3>
+              <span class="card-row-date">July 2022 &ndash; Jan. 2023</span>
+            </div>
+            <p class="exp-sub">Taipei, Taiwan</p>
+            <p class="exp-tech">Python, PostgreSQL, Selenium, Multiprocessing, PyTorch</p>
+            <ul>
+              <li>Designed a crawler-based sales revenue estimation algorithm for competitors' platform sellers within <strong>20%</strong> error.</li>
+              <li>Engineered an automated web-crawling system using Selenium and Python multiprocessing to gather gigabytes of data from <strong>50+</strong> sellers.</li>
+              <li>Designed and implemented a PostgreSQL backend to store and query competitor data, forming the foundation for a revenue estimation system.</li>
+              <li>Developed and deployed a forecasting pipeline using PyTorch (N-BEATS) to generate daily revenue monitoring reports and monthly estimates for executive decision-making.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Open Source Contributions</h3>
+
+        <div class="card-row">
+          <img src="logos/flyte_logo.webp" class="card-row-logo" alt="Flyte">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title"><a href="https://github.com/flyteorg/flyte" target="_blank" rel="noopener" class="badge flyte-badge"> Flyte</a> &mdash; ML Workflow Orchestration Platform</h3>
+              <span class="card-row-date">Dec. 2024 &ndash; Present</span>
+            </div>
+            <p class="exp-sub">Go, Python, Kubernetes, Protobuf</p>
+            <ul>
+              <li>Implemented <strong>vertical pod scaling</strong> to auto-recover from OOM errors by dynamically adjusting memory on task retries &mdash; spanning Flytekit, FlyteAdmin, FlytePropeller, and FlytePlugins (<a href="https://github.com/flyteorg/flytekit/pull/6293" target="_blank" rel="noopener">PR #6293</a>).</li>
+              <li>Developed registration result collection, output formatting, and quiet mode for <code>pyflyte register</code> (<a href="https://github.com/flyteorg/flytekit/pull/3028" target="_blank" rel="noopener">PR #3028</a>).</li>
+            </ul>
+          </div>
+        </div>
+        <h3 class="subsection-title">Teaching</h3>
+
+        <div class="card-row">
+          <img src="logos/ntu_logo.jpg" class="card-row-logo" alt="NTU">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Teaching Assistant @ <a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener" class="badge ntu-badge"> National Taiwan University</a></h3>
+              <span class="card-row-date">Jan. 2023 &ndash; June 2023</span>
+            </div>
+            <p class="card-row-course">Machine Learning (CSIE 5043)</p>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/ntu_logo.jpg" class="card-row-logo" alt="NTU">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Teaching Assistant @ <a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener" class="badge ntu-badge"> National Taiwan University</a></h3>
+              <span class="card-row-date">Sept. 2021 &ndash; Jan. 2022</span>
+            </div>
+            <p class="card-row-course">Programming for Business Computing (MGT 1006)</p>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Clubs &amp; Activities</h3>
+
+        <div class="card-row">
+          <img src="logos/ntucc_logo.jpeg" class="card-row-logo" alt="NTUCC">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Project Member @ <a href="https://ntucc.cc/" target="_blank" rel="noopener" class="badge"> NTU Consulting Club</a></h3>
+              <span class="card-row-date">Sept. 2022 &ndash; June 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/ntudac_logo.jpeg" class="card-row-logo" alt="NTUDAC">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title">Project Member @ <a href="https://ntudac.com/" target="_blank" rel="noopener" class="badge"> NTU Data Analytics Club</a></h3>
+              <span class="card-row-date">Sept. 2020 &ndash; June 2021</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>FAWN</h3>
+            <p class="project-sub">Chain-Replicated Key-Value Storage System</p>
+            <p class="exp-tech">Rust, gRPC, Protobuf, Tokio</p>
+            <p class="project-date">May &ndash; June 2025</p>
+            <ul>
+              <li>Built frontend and backend of a distributed KV store based on the FAWN architecture with chain replication protocol.</li>
+              <li>Designed a novel stage-based execution model for safe dynamic node joins, ensuring data consistency during reconfiguration.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3>Chord</h3>
+            <p class="project-sub">P2P Scalable Distributed File System</p>
+            <p class="exp-tech">AWS, RPC, C++</p>
+            <p class="project-date">March &ndash; May 2023</p>
+            <ul>
+              <li>Implemented a Chord-based distributed file system with auto-scaling on AWS EC2 using CloudWatch and Auto Scaling Groups.</li>
+              <li>Integrated file chunking, 3x replication, and automatic data migration for high availability and fault tolerance.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="section">
+        <h2 class="section-title">Publications</h2>
+        <div class="pub-item">
+          <p class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3676500" target="_blank" rel="noopener">Experience from Designing Augmented Reality Browsing Interfaces for Real-world Walking Scenarios</a></p>
+          <p class="pub-authors">Pin-Sung Ku, <strong>Yen-Pu Wang</strong>, Yun-Han Lee, Po-Chen Chien, Mike Y. Chen</p>
+          <p class="pub-desc">Mobile phones have enabled users to browse information in varying mobility contexts. For high-mobility settings such as walking, however, phones pose several usability challenges, particularly safety and limited screen sizes. While Augmented Reality (AR) has been proposed to address these issues, prior work has yet to investigate AR interface design in real-world walking conditions beyond text readability and notification design. This paper presents the first exploration of AR browsing interface design and extended usage while walking in the wild. We first conducted design sessions with 12 UI designers while walking in varied environments to design the window size, distance, opacity, anchor type, and placement for three categories of apps: text, video, and mixed content. Results show that <em>traffic level</em> significantly affects the designed window size, whereas <em>content type</em> significantly affects window size, distance, opacity, and vertical placement. To gain further insights from real-world usage, we conducted a multi-day observational study with 5 participants and observed that participants on average switched among window layouts every 3.3 minutes, for reasons such as safety and the level of extended visual attention.</p>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="card-row">
+          <img src="logos/ucsd_logo.jpeg" class="card-row-logo" alt="UCSD">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title"><a href="https://ucsd.edu" target="_blank" rel="noopener" class="badge ucsd-badge"> University of California, San Diego</a></h3>
+              <span class="card-row-date">Sept. 2024 &ndash; Dec. 2025</span>
+            </div>
+            <p class="edu-degree">M.S. Computer Science (System Track)</p>
+            <p class="edu-courses">Graduate Operating Systems, Distributed Systems and Computing, Networked Systems, Machine Learning Systems, Parallel Computation, Virtualization and Cloud Computing, Database Systems</p>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/ntu_logo.jpg" class="card-row-logo" alt="NTU">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title"><a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener" class="badge ntu-badge"> National Taiwan University</a></h3>
+              <span class="card-row-date">Sept. 2020 &ndash; June 2023</span>
+            </div>
+            <p class="edu-degree">B.A. Economics</p>
+            <p class="edu-courses">Programming Design, Data Structures &amp; Algorithms, Algorithm Design, Operating Systems, Distributed Systems, Machine Learning, Deep Learning, Introduction to Text Mining, Operations Research, Game Theory</p>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <img src="logos/pku_logo.png" class="card-row-logo" alt="PKU">
+          <div class="card-row-info">
+            <div class="card-row-header">
+              <h3 class="card-row-title"><a href="https://english.pku.edu.cn/" target="_blank" rel="noopener" class="badge pku-badge"> Peking University</a></h3>
+              <span class="card-row-date">Sept. 2018 &ndash; June 2020</span>
+            </div>
+            <p class="edu-degree">B.A. Finance (transferred)</p>
+            <p class="edu-courses">Advanced Mathematics (Calculus), Linear Algebra, Probability and Statistics, Economics, Microeconomics, Macroeconomics, Financial Econometrics, Corporate Finance, Security Analysis and Investment, Money and Finance, Marketing, Organization and Management, Entrepreneurship and Innovation</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-block">
+          <div class="skill-row">
+            <span class="skill-label">Languages</span>
+            <span class="skill-tags">Python, Rust, Go, C/C++, JavaScript, SQL, Bash</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Cloud &amp; DevOps</span>
+            <span class="skill-tags">AWS, Azure, GCP, Kubernetes, Docker, Terraform, Flyte, Helm, gRPC, Protobuf, CI/CD, GitHub Actions</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">ML/AI</span>
+            <span class="skill-tags">PyTorch, TensorFlow, vLLM, Triton, CUDA, Hugging Face, Scikit-learn</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Data &amp; Storage</span>
+            <span class="skill-tags">Kafka, Spark, PostgreSQL, Redis</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Yen-Pu (Paul) Wang</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
